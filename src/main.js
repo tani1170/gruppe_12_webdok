@@ -102,11 +102,13 @@ scroll(
     }
   )
 );
+
 scroll(
   animate(".progress-bar", {
     scaleX: [0, 1],
   })
 );
+
 document
   .querySelectorAll(".intro_para")
   .forEach((intro_para) => {
@@ -114,7 +116,7 @@ document
       intro_para.querySelector("p");
     scroll(
       animate(header, {
-        y: [-500, 1000],
+        y: [-1000, 300],
       }),
       {
         target: header,
@@ -147,6 +149,38 @@ document
         y: [1000, -1000],
         opacity: [0, 2, 2, 0.5, 0],
         scale: [1.5, 1, 0],
+      }),
+      {
+        target: header,
+      }
+    );
+  });
+
+document
+  .querySelectorAll(".del3_para")
+  .forEach((del3_para) => {
+    const header =
+      del3_para.querySelector(
+        "p, button"
+      );
+    scroll(
+      animate(header, {
+        y: [-800, 700],
+      }),
+      {
+        target: header,
+      }
+    );
+  });
+
+document
+  .querySelectorAll(".citat")
+  .forEach((citat) => {
+    const header =
+      citat.querySelector("p");
+    scroll(
+      animate(header, {
+        scale: [3, 0],
       }),
       {
         target: header,
