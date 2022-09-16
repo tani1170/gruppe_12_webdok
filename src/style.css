@@ -7,15 +7,17 @@
     font-family: "battery-park",
       sans-serif;
   }
-  p {
+  p,
+  h3 {
     font-family: "Helvetica Neue",
       Helvetica, Arial, sans-serif;
   }
+
   button {
     margin-top: 16px;
     background: #24424b;
     padding: 6px 24px;
-    border-radius: 5px;
+    border-radius: 2px;
     color: #ffffff;
     font-family: "Helvetica Neue",
       Helvetica, Arial, sans-serif;
@@ -26,4 +28,34 @@
   button:hover {
     scale: 1.2;
   }
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--red);
+  bottom: 50px;
+  transform: scaleX(0);
+}
+
+section > .intro_para {
+  height: 50vh;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+li:not(.video) {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
 }

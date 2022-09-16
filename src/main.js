@@ -18,58 +18,12 @@ animate(
 
 inView(
   animate(
-    ".overlay",
-
-    {
-      opacity: [0, 1, 0],
-    },
-    {
-      duration: 0.5,
-    },
-    {
-      target: document.querySelector(
-        ".overlaytrigger"
-      ),
-    }
-  ),
-  animate(
-    ".exit",
-    {
-      scaleY: [1, 0],
-      translateY: [0, 300],
-    },
-    {
-      duration: 0.5,
-      delay: 1.5,
-    },
-    {
-      target: document.querySelector(
-        ".overlaytrigger"
-      ),
-    }
-  ),
-  animate(
-    ".picture",
-    {
-      opacity: [0, 1],
-    },
-    {
-      duration: 0.5,
-      delay: 0.5,
-    },
-    {
-      target: document.querySelector(
-        ".overlaytrigger"
-      ),
-    }
-  ),
-  animate(
     ".up_down",
     {
-      translateY: [-500, 500, -500],
+      translateY: [-300, 300, -300],
     },
     {
-      duration: 10,
+      duration: 6,
       repeat: Infinity,
     }
   )
@@ -91,16 +45,7 @@ scroll(
     target: document.querySelector(
       "#horisontalscrollsection"
     ),
-  },
-  animate(
-    ".zoom",
-    {
-      scale: [0, 1],
-    },
-    {
-      duration: 0.2,
-    }
-  )
+  }
 );
 
 scroll(
@@ -136,19 +81,19 @@ scroll(
   {
     target:
       document.querySelector(".glitch"),
-    offset: ["-100vh", "end end"],
+    offset: ["-800vh", "end end"],
   }
 );
 document
   .querySelectorAll(".del2_para")
   .forEach((del2_para) => {
     const header =
-      del2_para.querySelector("p");
+      del2_para.querySelector("p, h3");
     scroll(
       animate(header, {
         y: [1000, -1000],
         opacity: [0, 2, 2, 0.5, 0],
-        scale: [1.5, 1, 0],
+        scale: [1, 1.5, 1, 0.5, 0],
       }),
       {
         target: header,
@@ -166,6 +111,7 @@ document
     scroll(
       animate(header, {
         y: [-800, 700],
+        scale: [1.5, 1],
       }),
       {
         target: header,
@@ -180,10 +126,23 @@ document
       citat.querySelector("p");
     scroll(
       animate(header, {
-        scale: [3, 0],
+        scale: [2.5, 0],
       }),
       {
         target: header,
+      }
+    );
+  });
+
+document
+  .querySelectorAll("filler")
+  .forEach((filler) => {
+    const fill =
+      filler.querySelector("fill");
+    scroll(
+      animate(fill, { y: [-400, 400] }),
+      {
+        target: fill,
       }
     );
   });
